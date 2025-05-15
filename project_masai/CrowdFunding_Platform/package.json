@@ -1,0 +1,14 @@
+{
+  "name": "crowdfunding-platform",
+  "version": "1.0.0",
+  "description": "A modern crowdfunding platform built with Firebase",
+  "type": "module",
+  "scripts": {
+    "start": "http-server public -p 8080",
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "firebase": "^10.7.0",
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,515 @@
+[debug] [2025-04-17T04:58:09.599Z] ----------------------------------------------------------------------
+[debug] [2025-04-17T04:58:09.601Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lpdig\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only storage
+[debug] [2025-04-17T04:58:09.601Z] CLI Version:   13.35.1
+[debug] [2025-04-17T04:58:09.602Z] Platform:      win32
+[debug] [2025-04-17T04:58:09.602Z] Node Version:  v18.17.1
+[debug] [2025-04-17T04:58:09.602Z] Time:          Thu Apr 17 2025 10:28:09 GMT+0530 (India Standard Time)
+[debug] [2025-04-17T04:58:09.602Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-17T04:58:09.606Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-04-17T04:58:09.856Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-17T04:58:09.857Z] > authorizing via signed-in user (msaadarshyati@gmail.com)
+[debug] [2025-04-17T04:58:09.857Z] [iam] checking project crowdpe-78fbf for permissions ["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2025-04-17T04:58:09.858Z] Checked if tokens are valid: false, expires at: 1744781759324
+[debug] [2025-04-17T04:58:09.858Z] Checked if tokens are valid: false, expires at: 1744781759324
+[debug] [2025-04-17T04:58:09.859Z] > refreshing access token with scopes: []
+[debug] [2025-04-17T04:58:09.859Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-17T04:58:09.860Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-17T04:58:10.175Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-17T04:58:10.175Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-17T04:58:10.189Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions [none]
+[debug] [2025-04-17T04:58:10.189Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-17T04:58:10.190Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2025-04-17T04:58:10.694Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-04-17T04:58:10.694Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-04-17T04:58:11.877Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions 200
+[debug] [2025-04-17T04:58:11.877Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["firebase.projects.get","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[info] 
+[info] === Deploying to 'crowdpe-78fbf'...
+[info] 
+[info] i  deploying storage 
+[info] i  storage: ensuring required API firebasestorage.googleapis.com is enabled... 
+[debug] [2025-04-17T04:58:11.885Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:11.885Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:11.885Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com [none]
+[debug] [2025-04-17T04:58:11.885Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-17T04:58:14.042Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com 200
+[debug] [2025-04-17T04:58:14.042Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com [omitted]
+[warn] !  storage: missing required API firebasestorage.googleapis.com. Enabling now... 
+[debug] [2025-04-17T04:58:14.043Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:14.043Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:14.043Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com:enable [none]
+[debug] [2025-04-17T04:58:14.043Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com:enable x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-17T04:58:16.042Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com:enable 200
+[debug] [2025-04-17T04:58:16.042Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com:enable [omitted]
+[debug] [2025-04-17T04:58:26.050Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:26.050Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:26.050Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com [none]
+[debug] [2025-04-17T04:58:26.050Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-17T04:58:27.976Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com 200
+[debug] [2025-04-17T04:58:27.977Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/crowdpe-78fbf/services/firebasestorage.googleapis.com [omitted]
+[info] +  storage: required API firebasestorage.googleapis.com is enabled 
+[debug] [2025-04-17T04:58:27.980Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:27.980Z] Checked if tokens are valid: true, expires at: 1744869489175
+[debug] [2025-04-17T04:58:27.981Z] >>> [apiv2][query] GET https://firebasestorage.googleapis.com/v1alpha/projects/crowdpe-78fbf/defaultBucket [none]
+[debug] [2025-04-17T04:58:29.124Z] <<< [apiv2][status] GET https://firebasestorage.googleapis.com/v1alpha/projects/crowdpe-78fbf/defaultBucket 404
+[debug] [2025-04-17T04:58:29.124Z] <<< [apiv2][body] GET https://firebasestorage.googleapis.com/v1alpha/projects/crowdpe-78fbf/defaultBucket {"error":{"code":404,"message":"Requested entity was not found.","status":"NOT_FOUND"}}
+[error] 
+[error] Error: Firebase Storage has not been set up on project 'crowdpe-78fbf'. Go to https://console.firebase.google.com/project/crowdpe-78fbf/storage and click 'Get Started' to set up Firebase Storage.
+[debug] [2025-04-17T08:07:34.103Z] ----------------------------------------------------------------------
+[debug] [2025-04-17T08:07:34.106Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lpdig\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only firestore:rules
+[debug] [2025-04-17T08:07:34.107Z] CLI Version:   13.35.1
+[debug] [2025-04-17T08:07:34.107Z] Platform:      win32
+[debug] [2025-04-17T08:07:34.107Z] Node Version:  v18.17.1
+[debug] [2025-04-17T08:07:34.108Z] Time:          Thu Apr 17 2025 13:37:34 GMT+0530 (India Standard Time)
+[debug] [2025-04-17T08:07:34.109Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-17T08:07:34.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-17T08:07:34.323Z] > authorizing via signed-in user (msaadarshyati@gmail.com)
+[debug] [2025-04-17T08:07:34.323Z] [iam] checking project crowdpe-78fbf for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2025-04-17T08:07:34.325Z] Checked if tokens are valid: false, expires at: 1744869489175
+[debug] [2025-04-17T08:07:34.325Z] Checked if tokens are valid: false, expires at: 1744869489175
+[debug] [2025-04-17T08:07:34.325Z] > refreshing access token with scopes: []
+[debug] [2025-04-17T08:07:34.327Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-17T08:07:34.327Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-17T08:07:34.697Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-17T08:07:34.697Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-17T08:07:34.714Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions [none]
+[debug] [2025-04-17T08:07:34.715Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-17T08:07:34.715Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2025-04-17T08:07:35.307Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions 200
+[debug] [2025-04-17T08:07:35.308Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'crowdpe-78fbf'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2025-04-17T08:07:35.311Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:35.311Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:35.311Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test [none]
+[debug] [2025-04-17T08:07:35.311Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test [omitted]
+[debug] [2025-04-17T08:07:37.111Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test 200
+[debug] [2025-04-17T08:07:37.111Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2025-04-17T08:07:37.112Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:37.112Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:37.113Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases pageSize=10&pageToken=
+[debug] [2025-04-17T08:07:38.527Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases 200
+[debug] [2025-04-17T08:07:38.528Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases {"releases":[{"name":"projects/crowdpe-78fbf/releases/cloud.firestore","rulesetName":"projects/crowdpe-78fbf/rulesets/257bdc2c-c250-4ab8-a690-701687fdabf3","createTime":"2025-04-16T04:41:17.023282Z","updateTime":"2025-04-16T04:41:17.023282Z"}]}
+[debug] [2025-04-17T08:07:38.528Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:38.528Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:38.528Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets/257bdc2c-c250-4ab8-a690-701687fdabf3 [none]
+[debug] [2025-04-17T08:07:39.191Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets/257bdc2c-c250-4ab8-a690-701687fdabf3 200
+[debug] [2025-04-17T08:07:39.191Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets/257bdc2c-c250-4ab8-a690-701687fdabf3 [omitted]
+[info] i  firestore: uploading rules firestore.rules... 
+[debug] [2025-04-17T08:07:39.195Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:39.195Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:39.196Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets [none]
+[debug] [2025-04-17T08:07:39.196Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets [omitted]
+[debug] [2025-04-17T08:07:40.648Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets 200
+[debug] [2025-04-17T08:07:40.649Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets {"name":"projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b","source":{"files":[{"content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    // Allow public read access to campaigns\n    match /campaigns/{campaignId} {\n      allow read: if true;\n      allow write: if request.auth != null;\n    }\n    \n    // Allow users to read and write their own data\n    match /users/{userId} {\n      allow read, write: if request.auth != null && request.auth.uid == userId;\n    }\n    \n    // Allow authenticated users to create comments\n    match /comments/{commentId} {\n      allow read: if true;\n      allow create: if request.auth != null;\n      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;\n    }\n    \n    // Allow authenticated users to make donations\n    match /donations/{donationId} {\n      allow read: if true;\n      allow create: if request.auth != null;\n      allow update, delete: if false;\n    }\n  }\n}\n","name":"firestore.rules"}]},"createTime":"2025-04-17T08:07:41.298527Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2025-04-17T08:07:40.649Z] [rules] created ruleset projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b
+[debug] [2025-04-17T08:07:40.649Z] [rules] releasing cloud.firestore/(default) with ruleset projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b
+[debug] [2025-04-17T08:07:40.649Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:40.649Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:40.650Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) [none]
+[debug] [2025-04-17T08:07:40.650Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) {"release":{"name":"projects/crowdpe-78fbf/releases/cloud.firestore/(default)","rulesetName":"projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b"}}
+[debug] [2025-04-17T08:07:42.118Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) 200
+[debug] [2025-04-17T08:07:42.118Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) {"name":"projects/crowdpe-78fbf/releases/cloud.firestore","rulesetName":"projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b","createTime":"2025-04-16T04:41:17.023282Z","updateTime":"2025-04-17T08:07:42.766837Z"}
+[debug] [2025-04-17T08:07:42.118Z] [rules] updated release projects/crowdpe-78fbf/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/crowdpe-78fbf/overview
+[debug] [2025-04-17T08:07:54.743Z] ----------------------------------------------------------------------
+[debug] [2025-04-17T08:07:54.746Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lpdig\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only firestore:indexes
+[debug] [2025-04-17T08:07:54.748Z] CLI Version:   13.35.1
+[debug] [2025-04-17T08:07:54.748Z] Platform:      win32
+[debug] [2025-04-17T08:07:54.748Z] Node Version:  v18.17.1
+[debug] [2025-04-17T08:07:54.749Z] Time:          Thu Apr 17 2025 13:37:54 GMT+0530 (India Standard Time)
+[debug] [2025-04-17T08:07:54.749Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-17T08:07:54.961Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-17T08:07:54.962Z] > authorizing via signed-in user (msaadarshyati@gmail.com)
+[debug] [2025-04-17T08:07:54.962Z] [iam] checking project crowdpe-78fbf for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2025-04-17T08:07:54.963Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:54.964Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:54.965Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions [none]
+[debug] [2025-04-17T08:07:54.965Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-17T08:07:54.965Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2025-04-17T08:07:55.480Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions 200
+[debug] [2025-04-17T08:07:55.481Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'crowdpe-78fbf'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2025-04-17T08:07:55.484Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:55.484Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:55.484Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test [none]
+[debug] [2025-04-17T08:07:55.484Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test [omitted]
+[debug] [2025-04-17T08:07:56.918Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test 200
+[debug] [2025-04-17T08:07:56.919Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[info] i  firestore: deploying indexes... 
+[debug] [2025-04-17T08:07:56.920Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:56.920Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:56.921Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2025-04-17T08:07:57.248Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2025-04-17T08:07:57.248Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2025-04-17T08:07:57.249Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:57.249Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:57.249Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2025-04-17T08:07:57.542Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2025-04-17T08:07:57.543Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/crowdpe-78fbf/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2025-04-17T08:07:57.543Z] Creating new index: {"collectionGroup":"campaigns","queryScope":"COLLECTION","fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"}]}
+[debug] [2025-04-17T08:07:57.544Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:57.544Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:57.545Z] >>> [apiv2][query] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes [none]
+[debug] [2025-04-17T08:07:57.546Z] >>> [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"}],"queryScope":"COLLECTION"}
+[debug] [2025-04-17T08:07:57.909Z] <<< [apiv2][status] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes 200
+[debug] [2025-04-17T08:07:57.910Z] <<< [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"name":"projects/crowdpe-78fbf/databases/(default)/operations/S0U0aFhqT2dBQ0lDDCoDIDBhYjNkMDdiMDlmMy00YjBiLTJlYzQtOWU4Ny0wMzJhZDUyOCQac2VuaWxlcGlwCQpBEg","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.IndexOperationMetadata","startTime":"2025-04-17T08:07:58.673873Z","index":"projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes/CICAgOjXh4EK","state":"INITIALIZING"}}
+[debug] [2025-04-17T08:07:57.910Z] Creating new index: {"collectionGroup":"campaigns","queryScope":"COLLECTION","fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"currentAmount","order":"DESCENDING"}]}
+[debug] [2025-04-17T08:07:57.911Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:57.912Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:57.912Z] >>> [apiv2][query] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes [none]
+[debug] [2025-04-17T08:07:57.912Z] >>> [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"currentAmount","order":"DESCENDING"}],"queryScope":"COLLECTION"}
+[debug] [2025-04-17T08:07:58.193Z] <<< [apiv2][status] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes 200
+[debug] [2025-04-17T08:07:58.193Z] <<< [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"name":"projects/crowdpe-78fbf/databases/(default)/operations/S01vcFVpSmdBQ0lDDCoDIDNhNTlkMTI0MzUxNi1iYzc4LWI5ZjQtNTFmMC1jY2YzMWYwMCQac2VuaWxlcGlwCQpBEg","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.IndexOperationMetadata","startTime":"2025-04-17T08:07:58.946921Z","index":"projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes/CICAgJiUpoMK","state":"INITIALIZING"}}
+[debug] [2025-04-17T08:07:58.193Z] Creating new index: {"collectionGroup":"campaigns","queryScope":"COLLECTION","fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"backers","order":"DESCENDING"}]}
+[debug] [2025-04-17T08:07:58.193Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:58.193Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:58.194Z] >>> [apiv2][query] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes [none]
+[debug] [2025-04-17T08:07:58.194Z] >>> [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"backers","order":"DESCENDING"}],"queryScope":"COLLECTION"}
+[debug] [2025-04-17T08:07:58.454Z] <<< [apiv2][status] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes 200
+[debug] [2025-04-17T08:07:58.455Z] <<< [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"name":"projects/crowdpe-78fbf/databases/(default)/operations/S0E0MW1pSmdBQ0lDDCoDIDE0NTRkYjA4OTQ3Ny05NGFiLTcxNjQtZjEyOC0yNjU5YzlhMCQac2VuaWxlcGlwCQpBEg","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.IndexOperationMetadata","startTime":"2025-04-17T08:07:59.226555Z","index":"projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes/CICAgJim14AK","state":"INITIALIZING"}}
+[debug] [2025-04-17T08:07:58.455Z] Creating new index: {"collectionGroup":"campaigns","queryScope":"COLLECTION","fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"endDate","order":"ASCENDING"}]}
+[debug] [2025-04-17T08:07:58.455Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:58.456Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:58.456Z] >>> [apiv2][query] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes [none]
+[debug] [2025-04-17T08:07:58.456Z] >>> [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"fields":[{"fieldPath":"status","order":"ASCENDING"},{"fieldPath":"endDate","order":"ASCENDING"}],"queryScope":"COLLECTION"}
+[debug] [2025-04-17T08:07:58.766Z] <<< [apiv2][status] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes 200
+[debug] [2025-04-17T08:07:58.767Z] <<< [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"name":"projects/crowdpe-78fbf/databases/(default)/operations/S0lvOUZqSmdBQ0lDDCoDIGQ4YTc3NmY1NTM4ZS04NGQ5LTM0ZjQtMTAwNC1mNDMzOGM5MyQac2VuaWxlcGlwCQpBEg","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.IndexOperationMetadata","startTime":"2025-04-17T08:07:59.483841Z","index":"projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes/CICAgJjF9oIK","state":"INITIALIZING"}}
+[debug] [2025-04-17T08:07:58.767Z] Creating new index: {"collectionGroup":"campaigns","queryScope":"COLLECTION","fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"}]}
+[debug] [2025-04-17T08:07:58.768Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:58.768Z] Checked if tokens are valid: true, expires at: 1744880853698
+[debug] [2025-04-17T08:07:58.768Z] >>> [apiv2][query] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes [none]
+[debug] [2025-04-17T08:07:58.769Z] >>> [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"fields":[{"fieldPath":"category","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"}],"queryScope":"COLLECTION"}
+[debug] [2025-04-17T08:07:59.013Z] <<< [apiv2][status] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes 200
+[debug] [2025-04-17T08:07:59.014Z] <<< [apiv2][body] POST https://firestore.googleapis.com/v1/projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes {"name":"projects/crowdpe-78fbf/databases/(default)/operations/S0U0ejdqSmdBQ0lDDCoDIDExMjQ0ZWYxMjQ1Ni00OTk5LWJiNzQtNmRjOC03YzBkNGRjNyQac2VuaWxlcGlwCQpBEg","metadata":{"@type":"type.googleapis.com/google.firestore.admin.v1.IndexOperationMetadata","startTime":"2025-04-17T08:07:59.787097Z","index":"projects/crowdpe-78fbf/databases/(default)/collectionGroups/campaigns/indexes/CICAgJj7z4EK","state":"INITIALIZING"}}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/crowdpe-78fbf/overview
+[debug] [2025-04-18T12:20:16.474Z] ----------------------------------------------------------------------
+[debug] [2025-04-18T12:20:16.476Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lpdig\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only firestore:rules
+[debug] [2025-04-18T12:20:16.477Z] CLI Version:   13.35.1
+[debug] [2025-04-18T12:20:16.477Z] Platform:      win32
+[debug] [2025-04-18T12:20:16.477Z] Node Version:  v18.17.1
+[debug] [2025-04-18T12:20:16.478Z] Time:          Fri Apr 18 2025 17:50:16 GMT+0530 (India Standard Time)
+[debug] [2025-04-18T12:20:16.478Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-18T12:20:16.481Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-04-18T12:20:16.739Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-18T12:20:16.740Z] > authorizing via signed-in user (msaadarshyati@gmail.com)
+[debug] [2025-04-18T12:20:16.741Z] [iam] checking project crowdpe-78fbf for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2025-04-18T12:20:16.741Z] Checked if tokens are valid: false, expires at: 1744880853698
+[debug] [2025-04-18T12:20:16.742Z] Checked if tokens are valid: false, expires at: 1744880853698
+[debug] [2025-04-18T12:20:16.742Z] > refreshing access token with scopes: []
+[debug] [2025-04-18T12:20:16.743Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-18T12:20:16.743Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-18T12:20:17.070Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-18T12:20:17.070Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-18T12:20:17.082Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions [none]
+[debug] [2025-04-18T12:20:17.082Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-18T12:20:17.083Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2025-04-18T12:20:17.474Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-04-18T12:20:17.475Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-04-18T12:20:18.758Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions 200
+[debug] [2025-04-18T12:20:18.758Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'crowdpe-78fbf'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2025-04-18T12:20:18.762Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:18.762Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:18.763Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test [none]
+[debug] [2025-04-18T12:20:18.763Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test [omitted]
+[debug] [2025-04-18T12:20:20.481Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test 200
+[debug] [2025-04-18T12:20:20.481Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2025-04-18T12:20:20.487Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:20.488Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:20.491Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases pageSize=10&pageToken=
+[debug] [2025-04-18T12:20:22.061Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases 200
+[debug] [2025-04-18T12:20:22.061Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases {"releases":[{"name":"projects/crowdpe-78fbf/releases/cloud.firestore","rulesetName":"projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b","createTime":"2025-04-16T04:41:17.023282Z","updateTime":"2025-04-17T08:07:42.766837Z"}]}
+[debug] [2025-04-18T12:20:22.062Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:22.062Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:22.062Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b [none]
+[debug] [2025-04-18T12:20:23.596Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b 200
+[debug] [2025-04-18T12:20:23.596Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets/4cddd3d8-9a4a-4a0d-80dd-7a8e633a083b [omitted]
+[info] i  firestore: uploading rules firestore.rules... 
+[debug] [2025-04-18T12:20:23.597Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:23.597Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:23.597Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets [none]
+[debug] [2025-04-18T12:20:23.597Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets [omitted]
+[debug] [2025-04-18T12:20:24.403Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets 200
+[debug] [2025-04-18T12:20:24.403Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/rulesets {"name":"projects/crowdpe-78fbf/rulesets/aa0c02e9-6fae-4f59-8ee7-4027818facff","source":{"files":[{"content":"rules_version = '2';\nservice cloud.firestore {\n  match /databases/{database}/documents {\n    // Allow public read access to campaigns\n    match /campaigns/{campaignId} {\n      allow read, write: if true; // Temporarily allow write for seeding\n    }\n    \n    // Allow users to read and write their own data\n    match /users/{userId} {\n      allow read, write: if request.auth != null && request.auth.uid == userId;\n    }\n    \n    // Allow authenticated users to create comments\n    match /comments/{commentId} {\n      allow read: if true;\n      allow create: if request.auth != null;\n      allow update, delete: if request.auth != null && request.auth.uid == resource.data.userId;\n    }\n    \n    // Allow authenticated users to make donations\n    match /donations/{donationId} {\n      allow read: if true;\n      allow create: if request.auth != null;\n      allow update, delete: if false;\n    }\n  }\n}\n","name":"firestore.rules"}]},"createTime":"2025-04-18T12:20:24.621823Z","metadata":{"services":["cloud.firestore"]}}
+[debug] [2025-04-18T12:20:24.403Z] [rules] created ruleset projects/crowdpe-78fbf/rulesets/aa0c02e9-6fae-4f59-8ee7-4027818facff
+[debug] [2025-04-18T12:20:24.403Z] [rules] releasing cloud.firestore/(default) with ruleset projects/crowdpe-78fbf/rulesets/aa0c02e9-6fae-4f59-8ee7-4027818facff
+[debug] [2025-04-18T12:20:24.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:24.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:20:24.404Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) [none]
+[debug] [2025-04-18T12:20:24.404Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) {"release":{"name":"projects/crowdpe-78fbf/releases/cloud.firestore/(default)","rulesetName":"projects/crowdpe-78fbf/rulesets/aa0c02e9-6fae-4f59-8ee7-4027818facff"}}
+[debug] [2025-04-18T12:20:25.969Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) 200
+[debug] [2025-04-18T12:20:25.970Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/crowdpe-78fbf/releases/cloud.firestore/(default) {"name":"projects/crowdpe-78fbf/releases/cloud.firestore","rulesetName":"projects/crowdpe-78fbf/rulesets/aa0c02e9-6fae-4f59-8ee7-4027818facff","createTime":"2025-04-16T04:41:17.023282Z","updateTime":"2025-04-18T12:20:26.192917Z"}
+[debug] [2025-04-18T12:20:25.970Z] [rules] updated release projects/crowdpe-78fbf/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/crowdpe-78fbf/overview
+[debug] [2025-04-18T12:27:06.119Z] ----------------------------------------------------------------------
+[debug] [2025-04-18T12:27:06.121Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lpdig\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-04-18T12:27:06.122Z] CLI Version:   13.35.1
+[debug] [2025-04-18T12:27:06.122Z] Platform:      win32
+[debug] [2025-04-18T12:27:06.122Z] Node Version:  v18.17.1
+[debug] [2025-04-18T12:27:06.123Z] Time:          Fri Apr 18 2025 17:57:06 GMT+0530 (India Standard Time)
+[debug] [2025-04-18T12:27:06.123Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-18T12:27:06.343Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-18T12:27:06.345Z] > authorizing via signed-in user (msaadarshyati@gmail.com)
+[debug] [2025-04-18T12:27:06.345Z] [iam] checking project crowdpe-78fbf for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-04-18T12:27:06.347Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:06.347Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:06.348Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions [none]
+[debug] [2025-04-18T12:27:06.348Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions x-goog-quota-user=projects/crowdpe-78fbf
+[debug] [2025-04-18T12:27:06.349Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-18T12:27:08.172Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions 200
+[debug] [2025-04-18T12:27:08.173Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/crowdpe-78fbf:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-04-18T12:27:08.173Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:08.173Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:08.174Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/crowdpe-78fbf [none]
+[debug] [2025-04-18T12:27:08.937Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/crowdpe-78fbf 200
+[debug] [2025-04-18T12:27:08.937Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/crowdpe-78fbf {"projectId":"crowdpe-78fbf","projectNumber":"862437623623","displayName":"CrowdPe","name":"projects/crowdpe-78fbf","resources":{"hostingSite":"crowdpe-78fbf","realtimeDatabaseInstance":"crowdpe-78fbf-default-rtdb"},"state":"ACTIVE","etag":"1_251a0078-2e15-4f73-bfac-262770fd2b3e"}
+[info] 
+[info] === Deploying to 'crowdpe-78fbf'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-04-18T12:27:08.942Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:08.942Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:08.942Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions [none]
+[debug] [2025-04-18T12:27:08.942Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-04-18T12:27:11.028Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions 200
+[debug] [2025-04-18T12:27:11.028Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions {"name":"projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[crowdpe-78fbf]: beginning deploy... 
+[info] i  hosting[crowdpe-78fbf]: found 22 files in public 
+[debug] [2025-04-18T12:27:11.051Z] [hosting] uploading with 200 concurrency
+[debug] [2025-04-18T12:27:11.057Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2025-04-18T12:27:11.094Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:11.095Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:11.101Z] [hosting] hash cache [cHVibGlj] stored for 22 files
+[debug] [2025-04-18T12:27:11.101Z] [hosting][hash queue][FINAL] {"max":32,"min":28,"avg":30,"active":0,"complete":22,"success":22,"errored":0,"retried":0,"total":22,"elapsed":44}
+[debug] [2025-04-18T12:27:11.103Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713:populateFiles [none]
+[debug] [2025-04-18T12:27:11.103Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713:populateFiles {"files":{"/pages/login.html":"4775e1212e73cf6f3fb3e7e50a7dbf0576440b1946ca9a943522367152ceb42b","/pages/signup.html":"9e51f262e4407c1526cb10e4ee6543fc8f1b997e23cf596d68db31f9658af8fd","/pages/create-campaign.html":"59ffc0475dbd10711afe64556ce91685145ee4c3fb710af8435e6b4a853954d7","/assets/js/firebase.js":"c5fa960b6cb811497ac08cf72df128666e98a8e605d493ef5123e8d16afdec50","/index.html":"2bf746ee62083299eb3b8426328b301f32a17b226a8074946c3ebfedf03ae454","/pages/dashboard.html":"f1c706135c630f2f42608443e52b9ca6666c0632b6701296c448880097417e12","/assets/js/main.js":"1808d7eb17e67bf4a2ed37f7a9c61950295ae023a32a322874deaf3ba6be02ca","/pages/campaign.html":"b8b451bbcef1db683b7266a9e6368d75796f3cfdae6951834b6d438eb168c5d9","/assets/js/config.js":"b4e503c622b812d5f10a70e252052baafe93f79b9d45870a6bb52b56667d602b","/assets/js/dashboard.js":"151d0ea7225e0a3cebd16ea013a432473ef92f7b923cec3a52cb6d35d1767c20","/pages/browse.html":"fcb6bf9823a58b62c81ee5479b9a0949b9517fceda023f1139a245c767ce89f5","/assets/js/auth.js":"01b27fefe200ffb68a98b02f32f6d658f3e2fcefa0bd5a939f0e91d764645c39","/assets/css/styles.css":"cdb92598422157a60fb85051b4748d28e8cb17fee008ea726797f5ea02fca4c8","/assets/css/create-campaign.css":"cb67791692a43f394ace84c092639680f9facb9b7422867aa9459b9d566bdf3a","/assets/css/campaign.css":"3b2c97c3face23a59a1e36391220ba630cf992a1e85d1e403fc8b3d786a7ea7a","/assets/js/createCampaign.js":"7d9efc54c2e9d6a0709aee73f5ba526cddb5accadf4dd2bdf9ffd6a4c255307b","/assets/css/home.css":"a94a18adc43a3cb87c1154a1a4582d84ef857158509f1a9d5bae08976133367d","/assets/css/auth.css":"1c0f890a3ffd687c5e65716c7d05cb6aafd231acd9b0b682319c53934b39010e","/assets/js/campaign.js":"c5dd24d1677cdc8b1de9c293b8e83231500c4ab1bb0f8b7c76cfb843d44ba368","/assets/js/browse.js":"921efd42c5d29517a229e49458de2e6f2703cca9d692afc2603d54f62619022b","/assets/css/browse.css":"6caa47b03b2ca72b3be5b87a1953ccd22f8b77607e4ccf0b0ddf243651acdd05","/assets/css/dashboard.css":"8641f53284bede1ee9894c02257a082be5632c9dc397aa48d59182cfb6fb90c3"}}
+[debug] [2025-04-18T12:27:12.394Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713:populateFiles 200
+[debug] [2025-04-18T12:27:12.394Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713:populateFiles {"uploadRequiredHashes":["9e51f262e4407c1526cb10e4ee6543fc8f1b997e23cf596d68db31f9658af8fd","01b27fefe200ffb68a98b02f32f6d658f3e2fcefa0bd5a939f0e91d764645c39","8641f53284bede1ee9894c02257a082be5632c9dc397aa48d59182cfb6fb90c3","59ffc0475dbd10711afe64556ce91685145ee4c3fb710af8435e6b4a853954d7","c5fa960b6cb811497ac08cf72df128666e98a8e605d493ef5123e8d16afdec50","7d9efc54c2e9d6a0709aee73f5ba526cddb5accadf4dd2bdf9ffd6a4c255307b","b4e503c622b812d5f10a70e252052baafe93f79b9d45870a6bb52b56667d602b","3b2c97c3face23a59a1e36391220ba630cf992a1e85d1e403fc8b3d786a7ea7a","c5dd24d1677cdc8b1de9c293b8e83231500c4ab1bb0f8b7c76cfb843d44ba368","cdb92598422157a60fb85051b4748d28e8cb17fee008ea726797f5ea02fca4c8","a94a18adc43a3cb87c1154a1a4582d84ef857158509f1a9d5bae08976133367d","4775e1212e73cf6f3fb3e7e50a7dbf0576440b1946ca9a943522367152ceb42b","2bf746ee62083299eb3b8426328b301f32a17b226a8074946c3ebfedf03ae454","151d0ea7225e0a3cebd16ea013a432473ef92f7b923cec3a52cb6d35d1767c20","1808d7eb17e67bf4a2ed37f7a9c61950295ae023a32a322874deaf3ba6be02ca","fcb6bf9823a58b62c81ee5479b9a0949b9517fceda023f1139a245c767ce89f5","cb67791692a43f394ace84c092639680f9facb9b7422867aa9459b9d566bdf3a","f1c706135c630f2f42608443e52b9ca6666c0632b6701296c448880097417e12","b8b451bbcef1db683b7266a9e6368d75796f3cfdae6951834b6d438eb168c5d9","6caa47b03b2ca72b3be5b87a1953ccd22f8b77607e4ccf0b0ddf243651acdd05","1c0f890a3ffd687c5e65716c7d05cb6aafd231acd9b0b682319c53934b39010e","921efd42c5d29517a229e49458de2e6f2703cca9d692afc2603d54f62619022b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files"}
+[debug] [2025-04-18T12:27:12.396Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.397Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.398Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.398Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.399Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.399Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.400Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.400Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.401Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.402Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.402Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.402Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.402Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.403Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.403Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.403Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.403Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.404Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.405Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.405Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.405Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.405Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.405Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.405Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.406Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.406Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.406Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.406Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.406Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.407Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.407Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.407Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.407Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.407Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.408Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.408Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.408Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.408Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.408Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.409Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:12.409Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/9e51f262e4407c1526cb10e4ee6543fc8f1b997e23cf596d68db31f9658af8fd [none]
+[debug] [2025-04-18T12:27:12.409Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/9e51f262e4407c1526cb10e4ee6543fc8f1b997e23cf596d68db31f9658af8fd [stream]
+[debug] [2025-04-18T12:27:12.411Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/01b27fefe200ffb68a98b02f32f6d658f3e2fcefa0bd5a939f0e91d764645c39 [none]
+[debug] [2025-04-18T12:27:12.411Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/01b27fefe200ffb68a98b02f32f6d658f3e2fcefa0bd5a939f0e91d764645c39 [stream]
+[debug] [2025-04-18T12:27:12.413Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/8641f53284bede1ee9894c02257a082be5632c9dc397aa48d59182cfb6fb90c3 [none]
+[debug] [2025-04-18T12:27:12.413Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/8641f53284bede1ee9894c02257a082be5632c9dc397aa48d59182cfb6fb90c3 [stream]
+[debug] [2025-04-18T12:27:12.414Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/59ffc0475dbd10711afe64556ce91685145ee4c3fb710af8435e6b4a853954d7 [none]
+[debug] [2025-04-18T12:27:12.414Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/59ffc0475dbd10711afe64556ce91685145ee4c3fb710af8435e6b4a853954d7 [stream]
+[debug] [2025-04-18T12:27:12.416Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5fa960b6cb811497ac08cf72df128666e98a8e605d493ef5123e8d16afdec50 [none]
+[debug] [2025-04-18T12:27:12.416Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5fa960b6cb811497ac08cf72df128666e98a8e605d493ef5123e8d16afdec50 [stream]
+[debug] [2025-04-18T12:27:12.418Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/7d9efc54c2e9d6a0709aee73f5ba526cddb5accadf4dd2bdf9ffd6a4c255307b [none]
+[debug] [2025-04-18T12:27:12.418Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/7d9efc54c2e9d6a0709aee73f5ba526cddb5accadf4dd2bdf9ffd6a4c255307b [stream]
+[debug] [2025-04-18T12:27:12.420Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b4e503c622b812d5f10a70e252052baafe93f79b9d45870a6bb52b56667d602b [none]
+[debug] [2025-04-18T12:27:12.420Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b4e503c622b812d5f10a70e252052baafe93f79b9d45870a6bb52b56667d602b [stream]
+[debug] [2025-04-18T12:27:12.421Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/3b2c97c3face23a59a1e36391220ba630cf992a1e85d1e403fc8b3d786a7ea7a [none]
+[debug] [2025-04-18T12:27:12.421Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/3b2c97c3face23a59a1e36391220ba630cf992a1e85d1e403fc8b3d786a7ea7a [stream]
+[debug] [2025-04-18T12:27:12.423Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5dd24d1677cdc8b1de9c293b8e83231500c4ab1bb0f8b7c76cfb843d44ba368 [none]
+[debug] [2025-04-18T12:27:12.423Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5dd24d1677cdc8b1de9c293b8e83231500c4ab1bb0f8b7c76cfb843d44ba368 [stream]
+[debug] [2025-04-18T12:27:12.425Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cdb92598422157a60fb85051b4748d28e8cb17fee008ea726797f5ea02fca4c8 [none]
+[debug] [2025-04-18T12:27:12.425Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cdb92598422157a60fb85051b4748d28e8cb17fee008ea726797f5ea02fca4c8 [stream]
+[debug] [2025-04-18T12:27:12.427Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/a94a18adc43a3cb87c1154a1a4582d84ef857158509f1a9d5bae08976133367d [none]
+[debug] [2025-04-18T12:27:12.427Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/a94a18adc43a3cb87c1154a1a4582d84ef857158509f1a9d5bae08976133367d [stream]
+[debug] [2025-04-18T12:27:12.428Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/4775e1212e73cf6f3fb3e7e50a7dbf0576440b1946ca9a943522367152ceb42b [none]
+[debug] [2025-04-18T12:27:12.428Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/4775e1212e73cf6f3fb3e7e50a7dbf0576440b1946ca9a943522367152ceb42b [stream]
+[debug] [2025-04-18T12:27:12.430Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/2bf746ee62083299eb3b8426328b301f32a17b226a8074946c3ebfedf03ae454 [none]
+[debug] [2025-04-18T12:27:12.430Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/2bf746ee62083299eb3b8426328b301f32a17b226a8074946c3ebfedf03ae454 [stream]
+[debug] [2025-04-18T12:27:12.432Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/151d0ea7225e0a3cebd16ea013a432473ef92f7b923cec3a52cb6d35d1767c20 [none]
+[debug] [2025-04-18T12:27:12.432Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/151d0ea7225e0a3cebd16ea013a432473ef92f7b923cec3a52cb6d35d1767c20 [stream]
+[debug] [2025-04-18T12:27:12.434Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1808d7eb17e67bf4a2ed37f7a9c61950295ae023a32a322874deaf3ba6be02ca [none]
+[debug] [2025-04-18T12:27:12.434Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1808d7eb17e67bf4a2ed37f7a9c61950295ae023a32a322874deaf3ba6be02ca [stream]
+[debug] [2025-04-18T12:27:12.435Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/fcb6bf9823a58b62c81ee5479b9a0949b9517fceda023f1139a245c767ce89f5 [none]
+[debug] [2025-04-18T12:27:12.435Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/fcb6bf9823a58b62c81ee5479b9a0949b9517fceda023f1139a245c767ce89f5 [stream]
+[debug] [2025-04-18T12:27:12.437Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cb67791692a43f394ace84c092639680f9facb9b7422867aa9459b9d566bdf3a [none]
+[debug] [2025-04-18T12:27:12.437Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cb67791692a43f394ace84c092639680f9facb9b7422867aa9459b9d566bdf3a [stream]
+[debug] [2025-04-18T12:27:12.439Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/f1c706135c630f2f42608443e52b9ca6666c0632b6701296c448880097417e12 [none]
+[debug] [2025-04-18T12:27:12.439Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/f1c706135c630f2f42608443e52b9ca6666c0632b6701296c448880097417e12 [stream]
+[debug] [2025-04-18T12:27:12.440Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b8b451bbcef1db683b7266a9e6368d75796f3cfdae6951834b6d438eb168c5d9 [none]
+[debug] [2025-04-18T12:27:12.440Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b8b451bbcef1db683b7266a9e6368d75796f3cfdae6951834b6d438eb168c5d9 [stream]
+[debug] [2025-04-18T12:27:12.442Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/6caa47b03b2ca72b3be5b87a1953ccd22f8b77607e4ccf0b0ddf243651acdd05 [none]
+[debug] [2025-04-18T12:27:12.442Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/6caa47b03b2ca72b3be5b87a1953ccd22f8b77607e4ccf0b0ddf243651acdd05 [stream]
+[debug] [2025-04-18T12:27:12.444Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1c0f890a3ffd687c5e65716c7d05cb6aafd231acd9b0b682319c53934b39010e [none]
+[debug] [2025-04-18T12:27:12.444Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1c0f890a3ffd687c5e65716c7d05cb6aafd231acd9b0b682319c53934b39010e [stream]
+[debug] [2025-04-18T12:27:12.446Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/921efd42c5d29517a229e49458de2e6f2703cca9d692afc2603d54f62619022b [none]
+[debug] [2025-04-18T12:27:12.446Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/921efd42c5d29517a229e49458de2e6f2703cca9d692afc2603d54f62619022b [stream]
+[debug] [2025-04-18T12:27:12.448Z] [hosting][populate queue][FINAL] {"max":1315,"min":1315,"avg":1315,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1354}
+[debug] [2025-04-18T12:27:12.448Z] [hosting] uploads queued: 22
+[info] i  hosting: uploading new files [0/22] (0%) 
+[debug] [2025-04-18T12:27:14.546Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cdb92598422157a60fb85051b4748d28e8cb17fee008ea726797f5ea02fca4c8 200
+[debug] [2025-04-18T12:27:14.546Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cdb92598422157a60fb85051b4748d28e8cb17fee008ea726797f5ea02fca4c8 [stream]
+[debug] [2025-04-18T12:27:14.560Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cb67791692a43f394ace84c092639680f9facb9b7422867aa9459b9d566bdf3a 200
+[debug] [2025-04-18T12:27:14.560Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/cb67791692a43f394ace84c092639680f9facb9b7422867aa9459b9d566bdf3a [stream]
+[debug] [2025-04-18T12:27:14.566Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/2bf746ee62083299eb3b8426328b301f32a17b226a8074946c3ebfedf03ae454 200
+[debug] [2025-04-18T12:27:14.566Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/2bf746ee62083299eb3b8426328b301f32a17b226a8074946c3ebfedf03ae454 [stream]
+[debug] [2025-04-18T12:27:14.575Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/59ffc0475dbd10711afe64556ce91685145ee4c3fb710af8435e6b4a853954d7 200
+[debug] [2025-04-18T12:27:14.575Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/59ffc0475dbd10711afe64556ce91685145ee4c3fb710af8435e6b4a853954d7 [stream]
+[debug] [2025-04-18T12:27:14.581Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/7d9efc54c2e9d6a0709aee73f5ba526cddb5accadf4dd2bdf9ffd6a4c255307b 200
+[debug] [2025-04-18T12:27:14.582Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/7d9efc54c2e9d6a0709aee73f5ba526cddb5accadf4dd2bdf9ffd6a4c255307b [stream]
+[debug] [2025-04-18T12:27:14.626Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1c0f890a3ffd687c5e65716c7d05cb6aafd231acd9b0b682319c53934b39010e 200
+[debug] [2025-04-18T12:27:14.626Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1c0f890a3ffd687c5e65716c7d05cb6aafd231acd9b0b682319c53934b39010e [stream]
+[debug] [2025-04-18T12:27:14.628Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/f1c706135c630f2f42608443e52b9ca6666c0632b6701296c448880097417e12 200
+[debug] [2025-04-18T12:27:14.628Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/f1c706135c630f2f42608443e52b9ca6666c0632b6701296c448880097417e12 [stream]
+[debug] [2025-04-18T12:27:14.635Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/9e51f262e4407c1526cb10e4ee6543fc8f1b997e23cf596d68db31f9658af8fd 200
+[debug] [2025-04-18T12:27:14.635Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/9e51f262e4407c1526cb10e4ee6543fc8f1b997e23cf596d68db31f9658af8fd [stream]
+[debug] [2025-04-18T12:27:14.637Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b8b451bbcef1db683b7266a9e6368d75796f3cfdae6951834b6d438eb168c5d9 200
+[debug] [2025-04-18T12:27:14.637Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b8b451bbcef1db683b7266a9e6368d75796f3cfdae6951834b6d438eb168c5d9 [stream]
+[debug] [2025-04-18T12:27:14.659Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/3b2c97c3face23a59a1e36391220ba630cf992a1e85d1e403fc8b3d786a7ea7a 200
+[debug] [2025-04-18T12:27:14.659Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/3b2c97c3face23a59a1e36391220ba630cf992a1e85d1e403fc8b3d786a7ea7a [stream]
+[debug] [2025-04-18T12:27:14.672Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/6caa47b03b2ca72b3be5b87a1953ccd22f8b77607e4ccf0b0ddf243651acdd05 200
+[debug] [2025-04-18T12:27:14.672Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/6caa47b03b2ca72b3be5b87a1953ccd22f8b77607e4ccf0b0ddf243651acdd05 [stream]
+[debug] [2025-04-18T12:27:14.676Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/151d0ea7225e0a3cebd16ea013a432473ef92f7b923cec3a52cb6d35d1767c20 200
+[debug] [2025-04-18T12:27:14.676Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/151d0ea7225e0a3cebd16ea013a432473ef92f7b923cec3a52cb6d35d1767c20 [stream]
+[debug] [2025-04-18T12:27:14.677Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b4e503c622b812d5f10a70e252052baafe93f79b9d45870a6bb52b56667d602b 200
+[debug] [2025-04-18T12:27:14.677Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/b4e503c622b812d5f10a70e252052baafe93f79b9d45870a6bb52b56667d602b [stream]
+[debug] [2025-04-18T12:27:14.689Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/8641f53284bede1ee9894c02257a082be5632c9dc397aa48d59182cfb6fb90c3 200
+[debug] [2025-04-18T12:27:14.689Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/8641f53284bede1ee9894c02257a082be5632c9dc397aa48d59182cfb6fb90c3 [stream]
+[debug] [2025-04-18T12:27:14.691Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/4775e1212e73cf6f3fb3e7e50a7dbf0576440b1946ca9a943522367152ceb42b 200
+[debug] [2025-04-18T12:27:14.691Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/4775e1212e73cf6f3fb3e7e50a7dbf0576440b1946ca9a943522367152ceb42b [stream]
+[debug] [2025-04-18T12:27:14.713Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/a94a18adc43a3cb87c1154a1a4582d84ef857158509f1a9d5bae08976133367d 200
+[debug] [2025-04-18T12:27:14.713Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/a94a18adc43a3cb87c1154a1a4582d84ef857158509f1a9d5bae08976133367d [stream]
+[debug] [2025-04-18T12:27:14.721Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/921efd42c5d29517a229e49458de2e6f2703cca9d692afc2603d54f62619022b 200
+[debug] [2025-04-18T12:27:14.721Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/921efd42c5d29517a229e49458de2e6f2703cca9d692afc2603d54f62619022b [stream]
+[debug] [2025-04-18T12:27:14.725Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1808d7eb17e67bf4a2ed37f7a9c61950295ae023a32a322874deaf3ba6be02ca 200
+[debug] [2025-04-18T12:27:14.725Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/1808d7eb17e67bf4a2ed37f7a9c61950295ae023a32a322874deaf3ba6be02ca [stream]
+[debug] [2025-04-18T12:27:14.746Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5fa960b6cb811497ac08cf72df128666e98a8e605d493ef5123e8d16afdec50 200
+[debug] [2025-04-18T12:27:14.747Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5fa960b6cb811497ac08cf72df128666e98a8e605d493ef5123e8d16afdec50 [stream]
+[debug] [2025-04-18T12:27:14.763Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5dd24d1677cdc8b1de9c293b8e83231500c4ab1bb0f8b7c76cfb843d44ba368 200
+[debug] [2025-04-18T12:27:14.763Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/c5dd24d1677cdc8b1de9c293b8e83231500c4ab1bb0f8b7c76cfb843d44ba368 [stream]
+[debug] [2025-04-18T12:27:14.818Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/01b27fefe200ffb68a98b02f32f6d658f3e2fcefa0bd5a939f0e91d764645c39 200
+[debug] [2025-04-18T12:27:14.818Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/01b27fefe200ffb68a98b02f32f6d658f3e2fcefa0bd5a939f0e91d764645c39 [stream]
+[debug] [2025-04-18T12:27:14.842Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/fcb6bf9823a58b62c81ee5479b9a0949b9517fceda023f1139a245c767ce89f5 200
+[debug] [2025-04-18T12:27:14.843Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/crowdpe-78fbf/versions/9a7fbf21debad713/files/fcb6bf9823a58b62c81ee5479b9a0949b9517fceda023f1139a245c767ce89f5 [stream]
+[debug] [2025-04-18T12:27:14.843Z] [hosting][upload queue][FINAL] {"max":2437,"min":2142,"avg":2266.8636363636365,"active":0,"complete":22,"success":22,"errored":0,"retried":0,"total":22,"elapsed":2448}
+[info] i  hosting: upload complete 
+[info] +  hosting[crowdpe-78fbf]: file upload complete 
+[debug] [2025-04-18T12:27:14.843Z] [hosting] deploy completed after 3813ms
+[debug] [2025-04-18T12:27:14.843Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "**/*.@(html|js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ],
+      "site": "crowdpe-78fbf"
+    },
+    "version": "projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713"
+  }
+]
+[info] i  hosting[crowdpe-78fbf]: finalizing version... 
+[debug] [2025-04-18T12:27:14.847Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:14.847Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:14.848Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions/9a7fbf21debad713 updateMask=status%2Cconfig
+[debug] [2025-04-18T12:27:14.848Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions/9a7fbf21debad713 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"**/*.@(html|js|css)","headers":{"Cache-Control":"no-cache"}}]}}
+[debug] [2025-04-18T12:27:16.313Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions/9a7fbf21debad713 200
+[debug] [2025-04-18T12:27:16.314Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/versions/9a7fbf21debad713 {"name":"projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"**/*.@(html|js|css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-04-18T12:27:10.562963Z","createUser":{"email":"msaadarshyati@gmail.com"},"finalizeTime":"2025-04-18T12:27:16.489489Z","finalizeUser":{"email":"msaadarshyati@gmail.com"}}
+[debug] [2025-04-18T12:27:16.314Z] [hosting] finalized version for crowdpe-78fbf:[object Object]
+[info] +  hosting[crowdpe-78fbf]: version finalized 
+[info] i  hosting[crowdpe-78fbf]: releasing new version... 
+[debug] [2025-04-18T12:27:16.314Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:16.314Z] Checked if tokens are valid: true, expires at: 1744982416070
+[debug] [2025-04-18T12:27:16.314Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/channels/live/releases versionName=projects%2F862437623623%2Fsites%2Fcrowdpe-78fbf%2Fversions%2F9a7fbf21debad713
+[debug] [2025-04-18T12:27:16.314Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/channels/live/releases {}
+[debug] [2025-04-18T12:27:17.625Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/channels/live/releases 200
+[debug] [2025-04-18T12:27:17.625Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/crowdpe-78fbf/channels/live/releases {"name":"projects/862437623623/sites/crowdpe-78fbf/channels/live/releases/1744979237240000","version":{"name":"projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"**/*.@(html|js|css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-04-18T12:27:10.562963Z","createUser":{"email":"msaadarshyati@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKgC-EEGYJTnBnF0k4LhsJHfsv8wgNLDnsGa8En7Az79m_bCeqX"},"finalizeTime":"2025-04-18T12:27:16.489489Z","finalizeUser":{"email":"msaadarshyati@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKgC-EEGYJTnBnF0k4LhsJHfsv8wgNLDnsGa8En7Az79m_bCeqX"}},"type":"DEPLOY","releaseTime":"2025-04-18T12:27:17.240Z","releaseUser":{"email":"msaadarshyati@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKgC-EEGYJTnBnF0k4LhsJHfsv8wgNLDnsGa8En7Az79m_bCeqX"}}
+[debug] [2025-04-18T12:27:17.625Z] [hosting] release: {"name":"projects/862437623623/sites/crowdpe-78fbf/channels/live/releases/1744979237240000","version":{"name":"projects/862437623623/sites/crowdpe-78fbf/versions/9a7fbf21debad713","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache"},"glob":"**/*.@(html|js|css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-04-18T12:27:10.562963Z","createUser":{"email":"msaadarshyati@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKgC-EEGYJTnBnF0k4LhsJHfsv8wgNLDnsGa8En7Az79m_bCeqX"},"finalizeTime":"2025-04-18T12:27:16.489489Z","finalizeUser":{"email":"msaadarshyati@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKgC-EEGYJTnBnF0k4LhsJHfsv8wgNLDnsGa8En7Az79m_bCeqX"}},"type":"DEPLOY","releaseTime":"2025-04-18T12:27:17.240Z","releaseUser":{"email":"msaadarshyati@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocKgC-EEGYJTnBnF0k4LhsJHfsv8wgNLDnsGa8En7Az79m_bCeqX"}}
+[info] +  hosting[crowdpe-78fbf]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/crowdpe-78fbf/overview
+[info] Hosting URL: https://crowdpe-78fbf.web.app

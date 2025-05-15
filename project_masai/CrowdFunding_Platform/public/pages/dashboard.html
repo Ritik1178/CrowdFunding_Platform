@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CrowdPe</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="../index.html" class="logo">CrowdPe</a>
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="dashboard.html" class="active">Dashboard</a>
+                <a href="create-campaign.html">Start Campaign</a>
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Your Dashboard</h1>
+                <p>Manage your campaigns and track your progress</p>
+            </div>
+            <a href="/pages/create-campaign.html" class="btn btn-primary">Create New Campaign</a>
+        </header>
+
+        <div class="error-message" id="dashboardError"></div>
+
+        <!-- Stats Section -->
+        <section class="stats-grid">
+            <!-- Stats will be loaded here -->
+            <div class="loading">Loading statistics...</div>
+        </section>
+
+        <!-- Campaigns Section -->
+        <section class="campaigns-section">
+            <div class="campaigns-header">
+                <h2>Your Campaigns</h2>
+                <div class="campaigns-filter">
+                    <select id="campaignFilter" class="form-select">
+                        <option value="all">All Campaigns</option>
+                        <option value="active">Active</option>
+                        <option value="completed">Completed</option>
+                        <option value="draft">Drafts</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="campaignsList" class="campaigns-grid">
+                <!-- Campaigns will be loaded here -->
+                <div class="loading">Loading campaigns...</div>
+            </div>
+        </section>
+    </div>
+
+    <script type="module" src="../assets/js/firebase.js"></script>
+    <script type="module" src="../assets/js/auth.js"></script>
+    <script type="module" src="../assets/js/dashboard.js"></script>
+
+    <script>
+        // Handle mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Share campaign function
+        window.shareCampaign = async (campaignId) => {
+            try {
+                const shareData = {
+                    title: 'Check out my campaign on CrowdPe',
+                    text: 'Support my crowdfunding campaign!',
+                    url: `${window.location.origin}/pages/campaign.html?id=${campaignId}`
+                };
+
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                } else {
+                    // Fallback to copying to clipboard
+                    await navigator.clipboard.writeText(shareData.url);
+                    alert('Campaign link copied to clipboard!');
+                }
+            } catch (error) {
+                console.error('Error sharing:', error);
+            }
+        };
+
+        // Handle campaign filter
+        document.getElementById('campaignFilter').addEventListener('change', (e) => {
+            // TODO: Implement campaign filtering
+            console.log('Filter campaigns by:', e.target.value);
+        });
+    </script>
+</body>
+</html>
